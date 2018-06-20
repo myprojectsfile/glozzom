@@ -63,3 +63,19 @@ body {
 #flowerImg {
     max-width: 50%;
 }
+
+#video-play {
+    position: relative;
+    min-height: 200px;
+    background-color: rgba(0, 0, 0, 0.2);
+    background: url('../img/video.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    // background-position: 0 400px;
+    text-align: center;
+    color: #fff;
+    a {
+        color: #fff;
+    }
+}

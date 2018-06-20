@@ -8,6 +8,7 @@
   <title>Glozzom Theme</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -128,24 +129,125 @@
       </div>
     </div>
   </div>
+  <!-- info section -->
   <section id="info" class="py-3">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="col-md-6">
           <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur rerum eos ducimus maiores, animi odio. Pariatur
+          <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur rerum eos ducimus maiores, animi odio. Pariatur
             reiciendis omnis ducimus dolorum!</p>
           <a href="#" class="btn btn-outline-danger btn-sm">Learn More</a>
         </div>
         <div class="col-md-6 text-center">
-          <img src="img/flower.png" id="flowerImg"  alt="flower" class="img-fluid">
+          <img src="img/flower.png" id="flowerImg" alt="flower" class="img-fluid">
         </div>
       </div>
     </div>
   </section>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+
+  <!-- video section  -->
+  <div id="video-play">
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a href="#" data-toggle="modal" data-target="#videoModal">
+              <i class="fa fa-play"></i>
+            </a>
+            <h3>See More in Video</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <iframe src="" height="300px" width="100%" allowfullscreen frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Phtot Gallery -->
+  <div class="py-5" id="photoGallery">
+    <div class="container">
+      <h1 class="text-center">Photo Gallery</h1>
+      <p class="text-center">checkout our photos</p>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=549" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=549" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=400" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=400" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=501" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=501" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=501" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=460" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=501" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=370" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://picsum.photos/560/350?image=501" data-toggle="lightbox" data-gallery="img-gallery">
+            <img src="https://picsum.photos/400/250?image=520" alt="" class="img-fluid img-thumbnail">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="text-center bg-dark text-white p-5">
+      <div class="row">
+        <div class="col">
+          <h3>Signup for newsletter</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio velit amet sit impedit? Officiis, nam! Necessitatibus
+            non suscipit consectetur aliquid?</p>
+          <div class="container">
+            <div class="form-inline justify-content-center">
+              <div class="form-group mr-2">
+                <label class="sr-only" for="username">username</label>
+                <input type="text" class="form-control form-control-sm" name="username" id="username" placeholder="username">
+              </div>
+              <div class="form-group mr-2">
+                <label class="sr-only" for="email">email</label>
+                <input type="text" class="form-control form-control-sm" name="email" id="email" placeholder="email">
+              </div>
+              <div class="btn btn-sm btn-warning">Signup</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+      <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+          event.preventDefault();
+          $(this).ekkoLightbox();
+        });
+      </script>
 </body>
 
 </html>
